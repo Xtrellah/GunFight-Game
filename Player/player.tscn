@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://oarcjyf1etfw"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_yxqkr"]
+[ext_resource type="Texture2D" uid="uid://c5r2i6fojpwpv" path="res://Assets/2dgf_sprite1-removebg-preview.png" id="2_xibxe"]
+[ext_resource type="Script" path="res://Player/Weapon.gd" id="3_skkdj"]
+[ext_resource type="Texture2D" uid="uid://bdojgirafstj4" path="res://Player/gun.webp" id="4_nu8mx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cc3qh"]
+height = 46.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_thiha"]
+radius = 4.0
+height = 18.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsgsr"]
+size = Vector2(21, 11)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_yxqkr")
+
+[node name="Player Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_xibxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CapsuleShape2D_cc3qh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1, 20)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_thiha")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Weapon" type="Area2D" parent="."]
+position = Vector2(-6, 5)
+script = ExtResource("3_skkdj")
+
+[node name="Marker2D" type="Marker2D" parent="Weapon"]
+position = Vector2(-10, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
+position = Vector2(0.480316, 0)
+shape = SubResource("RectangleShape2D_rsgsr")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="Gun" type="Sprite2D" parent="Weapon"]
+position = Vector2(0.19375, 0)
+scale = Vector2(0.0308373, 0.0275)
+texture = ExtResource("4_nu8mx")

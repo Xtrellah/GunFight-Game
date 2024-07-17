@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://c62dilxivgb1v"]
+
+[ext_resource type="Script" path="res://interface/interface.gd" id="1_efjhf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_efjhf")
+
+[node name="Test" type="Button" parent="."]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 293.0
+offset_right = 641.0
+offset_bottom = 342.0
+text = "TEST WORLD"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 355.0
+offset_right = 642.0
+offset_bottom = 404.0
+text = "QUIT"
+
+[connection signal="pressed" from="Test" to="." method="_on_test_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
