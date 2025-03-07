@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyjbhkd310vqb"]
+
+[ext_resource type="PackedScene" uid="uid://oarcjyf1etfw" path="res://Player/player.tscn" id="1_7uf0e"]
+[ext_resource type="Texture2D" uid="uid://b0scjb8aoxhw0" path="res://Assets/sunny background.jpg" id="2_n7qr3"]
+[ext_resource type="Texture2D" uid="uid://y05o3osjw8y6" path="res://Assets/Wooden_platform_sprite.png" id="2_swddw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_teeqf"]
+size = Vector2(552, 29.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ah5w"]
+size = Vector2(1664, 158.75)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -12)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(360, 173)
+shape = SubResource("RectangleShape2D_teeqf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(936, 292)
+shape = SubResource("RectangleShape2D_teeqf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(192, 380)
+shape = SubResource("RectangleShape2D_teeqf")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 572)
+shape = SubResource("RectangleShape2D_5ah5w")
+
+[node name="Panel" type="Panel" parent="StaticBody2D"]
+visible = false
+offset_left = 80.0
+offset_top = 157.0
+offset_right = 640.0
+offset_bottom = 189.0
+
+[node name="Panel2" type="Panel" parent="StaticBody2D"]
+visible = false
+offset_left = 656.0
+offset_top = 276.0
+offset_right = 1216.0
+offset_bottom = 308.0
+
+[node name="Panel3" type="Panel" parent="StaticBody2D"]
+visible = false
+offset_left = -88.0
+offset_top = 364.0
+offset_right = 472.0
+offset_bottom = 396.0
+
+[node name="Panel4" type="Panel" parent="StaticBody2D"]
+visible = false
+offset_left = -256.0
+offset_top = 492.0
+offset_right = 1408.0
+offset_bottom = 716.0
+
+[node name="SunnyBackground" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(576, 276)
+scale = Vector2(2.93478, 3.12222)
+texture = ExtResource("2_n7qr3")
+
+[node name="Platform" type="Sprite2D" parent="StaticBody2D/SunnyBackground"]
+position = Vector2(-72.5778, -33.3096)
+scale = Vector2(0.103997, 0.0284697)
+texture = ExtResource("2_swddw")
+
+[node name="Platform2" type="Sprite2D" parent="StaticBody2D/SunnyBackground"]
+position = Vector2(125.393, 5.12456)
+scale = Vector2(0.104495, 0.0302886)
+texture = ExtResource("2_swddw")
+
+[node name="Platform3" type="Sprite2D" parent="StaticBody2D/SunnyBackground"]
+position = Vector2(-129.603, 33.3096)
+scale = Vector2(0.103769, 0.0284698)
+texture = ExtResource("2_swddw")
+
+[node name="Platform4" type="Sprite2D" parent="StaticBody2D/SunnyBackground"]
+position = Vector2(8.17775, 89.6797)
+scale = Vector2(0.339321, 0.103796)
+texture = ExtResource("2_swddw")
+
+[node name="Player" parent="." instance=ExtResource("1_7uf0e")]
+position = Vector2(481, 295)
+speed = null

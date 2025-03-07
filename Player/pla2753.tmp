@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://oarcjyf1etfw"]
 
-[ext_resource type="Script" uid="uid://c8bn1cyiuxjxf" path="res://Player/player.gd" id="1_yxqkr"]
+[ext_resource type="Script" path="res://Player/player.gd" id="1_yxqkr"]
 [ext_resource type="Texture2D" uid="uid://c5r2i6fojpwpv" path="res://Assets/2dgf_sprite1-removebg-preview.png" id="2_xibxe"]
-[ext_resource type="Script" uid="uid://dhcbs20fwi3uu" path="res://Player/Weapon.gd" id="3_skkdj"]
+[ext_resource type="Script" path="res://Player/Weapon.gd" id="3_skkdj"]
 [ext_resource type="Texture2D" uid="uid://bdojgirafstj4" path="res://Player/gun.webp" id="4_nu8mx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cc3qh"]
@@ -17,6 +17,7 @@ size = Vector2(21, 11)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_yxqkr")
+speed = null
 
 [node name="Player Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
