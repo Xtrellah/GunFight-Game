@@ -13,7 +13,7 @@ config_version=5
 config/name="Project GunFight"
 run/main_scene="res://Interface/interface.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://Assets/2dgf_sprite1-removebg-preview.png"
+config/icon="res://Assets/2dgf_player.png"
 
 [input]
 

@@ -33,7 +33,7 @@ shape = SubResource("CapsuleShape2D_thiha")
 [node name="Gun" type="Node2D" parent="."]
 script = ExtResource("5_k53q1")
 
-[node name="Gun_Sprite" type="Sprite2D" parent="Gun"]
+[node name="Gun Sprite" type="Sprite2D" parent="Gun"]
 position = Vector2(37, -2)
 scale = Vector2(0.04875, 0.04875)
 texture = ExtResource("4_nu8mx")
