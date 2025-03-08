@@ -1,6 +1,14 @@
-extends Area2D
+extends CharacterBody2D
 
-@export var speed = 750
+var pos : Vector2
+var rota : float
+var dir : float
+var speed = 750
+
+func _ready():
+	global_position = pos
+	global_rotation = rota
 
 func _physics_process(delta):
-	position += transform.x * speed * delta
+	velocity = Vector2(speed, 0).rotated(dir)
+	move_and_slide()
